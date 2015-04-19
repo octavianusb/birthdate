@@ -36,53 +36,32 @@ var checkPopinDate = function () {
         }
     }
 
-    var dayVal = getInputValue('#day');
-    var monthVal = getInputValue('#month');
-    var yearVal = getInputValue('#year');
+
 
     function getInputValue(inputId) {
         var $this = $(inputId);
-        $this.value;
+        //var inputValue = $this.prop("value");
         $this.keyup(function () {
-            console.log(this.value);
             var inputValue = this.value;
+            console.log(inputValue);
             return inputValue;
         });
     }
 
-    console.log(dayVal);
-    //console.log(isValidMonth('12'));
+    var dayVal = getInputValue('#day');
+    var monthVal = getInputValue('#month');
+    var yearVal = getInputValue('#year');
 
-//    $('#form .form-group').each(function (index) {
-//        var arr = $('#edit-birthdate .form-item').each(function (index) {
-//            var arr = [];
-//            var inputVal = $(this).find('input').prop('value');
-//            arr = arr.concat(arr.push(inputVal));
-//            console.log(arr);
-//
-//            $(this).find('input').keyup(function () {
-////      for(i = 0, )
-//                if (index === 0) {
-//                    console.log('primul');
-//                } else if (index === 1) {
-//                    console.log('al 2-lea');
-//                } else if (index === 2) {
-//                    console.log('al 3-lea');
-//                }
-//            });
-//        });
-//    });
+    console.log(dayVal);
+    console.log(monthVal);
+    console.log(yearVal);
+
+
 }
-//  $(inputId).keyup(function () {
-//    inputVal = $(inputId).value;
-//  });
 
 
 
 
 $(document).ready(function(){
-    checkPopinDate();
-});
-$(window).load(function(){
     checkPopinDate();
 });
