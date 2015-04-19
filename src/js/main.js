@@ -36,17 +36,21 @@ var checkPopinDate = function () {
         }
     }
 
-    var inputId = getInputValue('#day');
+    var dayVal = getInputValue('#day');
     var monthVal = getInputValue('#month');
     var yearVal = getInputValue('#year');
 
     function getInputValue(inputId) {
-        $(inputId).keyup(function () {
-            return $(this).value;
+        var $this = $(inputId);
+        $this.value;
+        $this.keyup(function () {
+            console.log(this.value);
+            var inputValue = this.value;
+            return inputValue;
         });
     }
 
-    //  console.log(dayVal);
+    console.log(dayVal);
     //console.log(isValidMonth('12'));
 
 //    $('#form .form-group').each(function (index) {
@@ -77,5 +81,8 @@ var checkPopinDate = function () {
 
 
 $(document).ready(function(){
+    checkPopinDate();
+});
+$(window).load(function(){
     checkPopinDate();
 });
